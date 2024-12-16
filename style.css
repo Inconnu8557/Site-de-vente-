@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Arial', Arial, Helvetica, sans-serifs;
     margin: 0;
@@ -52,15 +53,26 @@ body {
 }
 
 .hero-section {
-    background: url('https://www.vivlio.com/wp-content/themes/vivlio/images/logo-vivlio.png') no-repeat center center/cover;
-    color: rgb(0, 255, 8);
-    padding: 100px 50px;
+    background: url('https://www.vivlio.com/wp-content/themes/vivlio/images/logo-vivlio.png') no-repeat center center;
+    background-size: contain; 
+    color: rgb(31, 11, 253);
+    padding: 0;
     text-align: center;
-    height: auto;
+    height: 100vh;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+.hero-content button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Transition fluide pour le scaling */
 }
 
 .hero-section h1 {
@@ -130,4 +142,7 @@ body {
 
 .footer p {
     font-size: 0.9em;
+}
+.hero-content button {
+    transition: transform 0.3s ease; 
 }
