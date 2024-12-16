@@ -3,8 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Page avec vidéo pleine page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .first-page {
+            height: 100vh; 
+            background-color: lightblue;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .first-page h1 {
+            font-size: 2rem;
+        }
+
+        .second-page {
+            height: 100vh; 
+            width: 100%; 
+            background-color: #000; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
+<body>
+<!DOCTYPE html>
+<html lang="fr">
 <body>
     <header class="header">
         <nav class="nav-bar">
@@ -17,7 +56,6 @@
             </ul>
         </nav>
     </header>
-
     <section class="hero-section">
         <div class="hero-content">
             <h1>Découvrez nos nouveaux modèles de liseuses</h1>
@@ -26,7 +64,6 @@
             <button onclick="window.location.href='#'">Acheter maintenant</button>
         </div>
     </section>
-
     <footer class="footer">
         <div class="footer-links">
             <a href="#">Conditions d'utilisation</a>
@@ -35,15 +72,7 @@
         <p>&copy; 2024 Vivilio. Tous droits réservés.</p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
 
-    </div>
-</section>
-<section class="hero-section">
-    <div class="hero-content">
-        <img src="https://urls.fr/dCAmnN" alt="Nouvelle collection" class="hero-image">
     </div>
 </section>
 <!DOCTYPE html>
@@ -54,9 +83,14 @@
     <link rel="stylesheet" href="style.css">
 
 
-        </div>
-    </footer>
+    <!-- Deuxième page avec vidéo -->
+    <div class="second-page">
+        <iframe src="https://www.youtube.com/embed/LMhUxu8ZfQQ?autoplay=1&rel=0&showinfo=0"
+                frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+        </iframe>
+    </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
