@@ -10,28 +10,87 @@
             padding: 0;
             height: 100%;
             width: 100%;
+            font-family: 'Arial', sans-serif;
         }
 
-        .first-page {
-            height: 100vh; 
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: #555;
+            transform: scale(1.1);
+            border-radius: 5px;
+        }
+
+        .hero-section {
+            height: 100vh;
             background-color: lightblue;
-            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            padding: 20px;
         }
 
-        .first-page h1 {
-            font-size: 2rem;
+        .hero-content h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .hero-content button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero-content button:hover {
+            background-color: #005f75;
+            transform: scale(1.05);
         }
 
         .second-page {
-            height: 100vh; 
-            width: 100%; 
-            background-color: #000; 
+            height: 100vh;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: black;
         }
 
         iframe {
@@ -39,58 +98,69 @@
             height: 100%;
             border: none;
         }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
     </style>
 </head>
 <body>
-<!DOCTYPE html>
-<html lang="fr">
-<body>
     <header class="header">
+        <div class="logo">
+            <img src="https://www.vivlio.com/wp-content/themes/vivlio/images/logo-vivlio.png" alt="Logo Vivlio">
+        </div>
         <nav class="nav-bar">
-            <div class="logo">
-                <a href="#">Vivilio</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Produits</a></li>
-                <li><a href="#">Bibliothèque</a></li>
-            </ul>
+            <a href="#">Produits</a>
+            <a href="#">Bibliothèque</a>
         </nav>
     </header>
-    <section class="hero-section">
+        <section class="hero-section">
         <div class="hero-content">
             <h1>Découvrez nos nouveaux modèles de liseuses</h1>
-            <p>Relier l'informatique a la lecture.</p>
-            <p>Partez en vacances sans avoir 17 livres dans votre valises.<p>
+            <p>Relier l'informatique à la lecture.</p>
+            <p>Partez en vacances sans avoir 17 livres dans votre valise.</p>
             <button onclick="window.location.href='#'">Acheter maintenant</button>
         </div>
+    </section>
+    <section class="second-page">
+        <iframe src="https://www.youtube.com/embed/LMhUxu8ZfQQ?autoplay=1&rel=0&showinfo=0" 
+                frameborder="0" 
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+        </iframe>
     </section>
     <footer class="footer">
         <div class="footer-links">
             <a href="#">Conditions d'utilisation</a>
             <a href="#">Support Client</a>
+            <a href="#">A propos de nous</a>
         </div>
         <p>&copy; 2024 Vivilio. Tous droits réservés.</p>
     </footer>
-
-
-    </div>
-</section>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-
-    <!-- Deuxième page avec vidéo -->
-    <div class="second-page">
-        <iframe src="https://www.youtube.com/embed/LMhUxu8ZfQQ?autoplay=1&rel=0&showinfo=0"
-                frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-        </iframe>
-    </div>
 
 </body>
 </html>
