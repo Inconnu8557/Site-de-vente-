@@ -1,11 +1,11 @@
-// Ajout d'une simple animation d'interaction au bouton dans la section Hero
-document.querySelector('.hero-content button').addEventListener('mouseover', () => {
-    document.querySelector('.hero-content button').style.transform = 'scale(1.1)';
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('.hero-content button');
 
-document.querySelector('.hero-content button').addEventListener('mouseout', () => {
-    document.querySelector('.hero-content button').style.transform = 'scale(1)';
-});
-document.querySelector('.hero-content button').addEventListener('souris', () => {
-    document.querySelector('.hero-content button').style.transform = 'scale(3)';
+    button.addEventListener('mouseover', () => {
+        button.style.transform = 'scale(1.1)'; 
+    });
+
+    button.addEventListener('mouseout', () => {
+        button.style.transform = 'scale(1)';
+    });
 });
