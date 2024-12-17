@@ -1,5 +1,6 @@
+/* Style global */
 body {
-    font-family: 'Arial', Arial, Helvetica, sans-serifs;
+    font-family: 'Arial', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,8 +8,9 @@ body {
     color: #333;
 }
 
+/* Header */
 .header {
-    background-color: #2c3e50;
+    background-color: #276cac;
     padding: 20px 0;
     color: rgb(158, 43, 23);
     position: sticky;
@@ -16,6 +18,7 @@ body {
     width: 100%;
 }
 
+/* Navbar */
 .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -23,13 +26,6 @@ body {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 50px;
-}
-
-.logo a {
-    font-size: 1.9em;
-    font-weight: bold;
-    color: #15c5f1;
-    text-decoration: none;
 }
 
 .nav-links {
@@ -53,25 +49,27 @@ body {
 
 .hero-section {
     background: url('https://www.vivlio.com/wp-content/themes/vivlio/images/logo-vivlio.png') no-repeat center center;
-    background-size: contain; 
+    background-size: contain;  /* S'assure que l'image reste entièrement visible */
+    background-position: center center;  /* Centrage de l'image */
+    background-attachment: fixed;  /* L'image reste fixe pendant le défilement */
     color: rgb(31, 11, 253);
     padding: 0;
     text-align: center;
-    height: 100vh;
+    height: 100vh;  /* Hauteur de la section à 100% de la hauteur de l'écran */
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-.hero-content button {
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
+
+/* Rendre l'image responsive sans la déformer */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;  /* Permet de rendre la section plus petite sur les petits écrans */
+        min-height: 100vh; /* Minimum à 100vh pour couvrir toute la hauteur de l'écran */
+        padding: 50px 20px;  /* Espacement interne pour les petits écrans */
+    }
 }
 
 .hero-section h1 {
@@ -85,35 +83,46 @@ body {
 }
 
 .hero-section button {
-    background-color: #3498db;
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 15px 30px;
-    font-size: 1.2em;
+    padding: 10px 20px;
+    font-size: 1.5rem;
     cursor: pointer;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .hero-section button:hover {
     background-color: #2980b9;
+    transform: scale(1.1);
 }
 
+/* Section vidéo */
 .video-section {
     padding: 50px 20px;
     background-color: #ecf0f1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap; /* Permet aux vidéos de s'ajuster à la taille de l'écran */
+    justify-content: center; /* Centre les vidéos horizontalement */
+    gap: 20px; /* Espacement entre les vidéos */
+}
+
+.video-container {
+    flex: 1 1 300px;  /* Chaque vidéo prend une largeur minimale de 300px */
+    max-width: 400px; /* Largeur maximale pour chaque vidéo */
+    margin: 10px;
 }
 
 .video-container iframe {
-    width: 80%;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
+
+/* Footer */
 .footer {
     background-color: #2c3e50;
     color: white;
@@ -140,6 +149,65 @@ body {
 .footer p {
     font-size: 0.9em;
 }
-.hero-content button {
-    transition: transform 0.3s ease; 
+
+/* Bouton dans la section hero */
+.hero-content {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 70px auto;
 }
+
+#username-input {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f75;
+    transform: scale(1.05);
+}
+
+/* Menu icon - Animations */
+i.fas.fa-camera,
+i.fas.fa-file-alt,
+i.fas.fa-file-pdf,
+i.fas.fa-file-excel,
+i.fas.fa-file-powerpoint,
+i.fas.fa-file-word {
+    padding: 15px;
+    border-radius: 50%;
+    background-color: rgb(255, 97, 239);
+    box-shadow: 1px 1px 5px black;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+i.fas.fa-camera:hover,
+i.fas.fa-file-alt:hover,
+i.fas.fa-file-pdf:hover,
+i.fas.fa-file-excel:hover,
+i.fas.fa-file-powerpoint:hover,
+i.fas.fa-file-word:hover {
+    background-color: #3498db; /* Changement de couleur au survol */
+}
+
