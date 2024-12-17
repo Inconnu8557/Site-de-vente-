@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous contacter</title>
+    <style>
+        /* Thème clair */
+        body.light-theme {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header.light-theme {
+            background-color: #276cac;
+            color: #fff;
+        }
+        .header.dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: #555;
+            transform: scale(1.1);
+            border-radius: 5px;
+        }
+
+        .hero-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .hero-content button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero-content button:hover {
+            background-color: #005f75;
+            transform: scale(1.05);
+        }
+
+        .user-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .user-form h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .user-form p {
+            color: #777;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .user-form input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .user-form input:focus {
+            border-color: #008CBA;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 140, 186, 0.6);
+        }
+
+        .user-form button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .user-form button:hover {
+            background-color: #005f75;
+            transform: scale(1.05);
+        }
+
+        .video-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .video-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .video-container {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: scale(1.05); 
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .mail_link {
+            background-color: white;
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            margin: 10px;
+            color: rgb(0, 123, 255);
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /*transition: transform 0.5s ease;*/
+        }
+
+        /*.mail_link:hover {
+            transform: scale(1.05);
+        }  à utiliser avec un display block je crois*/
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="https://www.vivlio.com/wp-content/themes/vivlio/images/logo-vivlio.png" alt="Logo Vivlio">
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#Home">Accueil</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Nous contacter</h1>
+            <p>Envoyez nous un mail</p>
+            <p>Notre adresse : placeholder@placeholder2.com</p>
+            <a href="mailto:placeholder@placeholder.com" class="mail_link">Send email to us</a>
+        </div>
+    </section>
+
+    <section class="user-form">
+        <h1>Bienvenue, <span id="username-display">!</span></h1>
+        <p>Entrez votre nom et email pour une expérience personnalisée.</p>
+        <input type="text" id="username-input" placeholder="Entrez votre nom">
+        <input type="email" id="email-input" placeholder="Entrez votre email">
+        <button id="save-button">Sauvegarder</button>
+        <button id="clear-button">Effacer</button>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Conditions d'utilisation</a>
+            <a href="#">Support Client</a>
+            <a href="#">A propos de nous</a>
+        </div>
+        <p>&copy; 2024 Vivilio. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const usernameInput = document.getElementById('username-input');
+            const emailInput = document.getElementById('email-input');
+            const saveButton = document.getElementById('save-button');
+            const clearButton = document.getElementById('clear-button');
+            const usernameDisplay = document.getElementById('username-display');
+
+            const loadUserInfo = () => {
+                const storedUsername = localStorage.getItem('username');
+                const storedEmail = localStorage.getItem('email');
+                if (storedUsername && storedEmail) {
+                    usernameInput.value = storedUsername;
+                    emailInput.value = storedEmail;
+                    usernameDisplay.textContent = storedUsername;
+                }
+            };
+
+            const saveUserInfo = () => {
+                const username = usernameInput.value;
+                const email = emailInput.value;
+                if (username && email) {
+                    localStorage.setItem('username', username);
+                    localStorage.setItem('email', email);
+                    usernameDisplay.textContent = username;
+                    alert("Informations enregistrées !");
+                } else {
+                    alert("Veuillez remplir tous les champs !");
+                }
+            };
+
+            const clearUserInfo = () => {
+                localStorage.removeItem('username');
+                localStorage.removeItem('email');
+                usernameInput.value = '';
+                emailInput.value = '';
+                usernameDisplay.textContent = '!';
+            };
+
+            saveButton.addEventListener('click', saveUserInfo);
+            clearButton.addEventListener('click', clearUserInfo);
+
+            loadUserInfo();
+
+            // API Display Section - Call example
+            const fetchApiData = async () => {
+    try {
+        const response = await fetch('https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/fr-en-annuaire-education/records?limit=1&where=identifiant_de_l_etablissement="0693890D"');
+        const data = await response.json(); // Extraction des données JSON
+        const displaySection = document.getElementById('api-display');
+        console.log(`<pre>${JSON.stringify(data, null, 2)}</pre>`); // Affiche les données dans la console pour vérifier
+        displaySection.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`; // Affiche les données dans la section
+    } catch (error) {
+        console.error('Erreur de récupération des données API:', error);
+    }
+};
+fetchApiData();
+
+        });
+    </script>
+</body>
+</html>
