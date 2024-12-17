@@ -133,8 +133,6 @@
             <img src="https://www.vivlio.com/wp-content/themes/vivlio/images/logo-vivlio.png" alt="Logo Vivlio">
         </div>
         <nav class="nav-bar">
-            <a href="#">Produits</a>
-            <a href="#">Bibliothèque</a>
         </nav>
     </header>
         <section class="hero-section">
@@ -144,13 +142,24 @@
             <p>Partez en vacances sans avoir 17 livres dans votre valise.</p>
             <button onclick="window.location.href='#'">Acheter maintenant</button>
         </div>
+        <div class="video-section">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8_ZGBKZZg3k?si=33TLKB1xoolHcb_L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fAHREjLVdm8?si=UH-Sd692ysUWfTgZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SR3aVcCOp7E?si=ruU1IiG6gVDaa16l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/EM4TJvoNbPo?si=EraCmFPSCpGT_xMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+            </div>
+        
     </section>
-    <section class="second-page">
-        <iframe src="https://www.youtube.com/embed/LMhUxu8ZfQQ?autoplay=1&rel=0&showinfo=0" 
-                frameborder="0" 
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-        </iframe>
+    <section class="hero-content">
+        <h1>Bienvenue, <span id="username-display">!</span></h1>
+        <p>Entrez votre nom pour une expérience personnalisée.</p>
+        <input type="text" id="username-input" placeholder="Entrez votre nom complet">
+        <button id="save-button">Sauvegarder</button>
+        <button id="clear-button">Effacer</button>
     </section>
     <footer class="footer">
         <div class="footer-links">
@@ -160,7 +169,7 @@
         </div>
         <p>&copy; 2024 Vivilio. Tous droits réservés.</p>
     </footer>
-
+ <script src="script.js" defer></script>
+ <link rel="stylesheet" href="style.css">
 </body>
 </html>
-
