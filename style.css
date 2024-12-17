@@ -1,4 +1,3 @@
-/* Style global */
 body {
     font-family: 'Arial', Arial, Helvetica, sans-serif;
     margin: 0;
@@ -8,7 +7,6 @@ body {
     color: #333;
 }
 
-/* Header */
 .header {
     background-color: #276cac;
     padding: 20px 0;
@@ -18,16 +16,22 @@ body {
     width: 100%;
 }
 
-/* Navbar */
-.nav-bar {
+.nav-bar a {
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
+    font-size: 16px;
     align-items: center;
+    display: block;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 10px;
 }
-
+.nav-bar a:hover {
+    background-color: #555;
+    transform: scale(1.1);
+    border-radius: 5px;
+}
 .nav-links {
     list-style: none;
     margin: 0;
@@ -49,13 +53,13 @@ body {
 
 .hero-section {
     background: url('https://www.vivlio.com/wp-content/themes/vivlio/images/logo-vivlio.png') no-repeat center center;
-    background-size: contain;  /* S'assure que l'image reste entièrement visible */
-    background-position: center center;  /* Centrage de l'image */
-    background-attachment: fixed;  /* L'image reste fixe pendant le défilement */
+    background-size: contain; 
+    background-position: center center;  
+    background-attachment: fixed;  
     color: rgb(31, 11, 253);
     padding: 0;
     text-align: center;
-    height: 100vh;  /* Hauteur de la section à 100% de la hauteur de l'écran */
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,12 +67,11 @@ body {
     position: relative;
 }
 
-/* Rendre l'image responsive sans la déformer */
 @media (max-width: 768px) {
     .hero-section {
-        height: auto;  /* Permet de rendre la section plus petite sur les petits écrans */
-        min-height: 100vh; /* Minimum à 100vh pour couvrir toute la hauteur de l'écran */
-        padding: 50px 20px;  /* Espacement interne pour les petits écrans */
+        height: auto;  
+        min-height: 100vh; 
+        padding: 50px 20px;  
     }
 }
 
@@ -98,19 +101,18 @@ body {
     transform: scale(1.1);
 }
 
-/* Section vidéo */
 .video-section {
     padding: 50px 20px;
     background-color: #ecf0f1;
     display: flex;
-    flex-wrap: wrap; /* Permet aux vidéos de s'ajuster à la taille de l'écran */
-    justify-content: center; /* Centre les vidéos horizontalement */
-    gap: 20px; /* Espacement entre les vidéos */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
 }
 
 .video-container {
-    flex: 1 1 300px;  /* Chaque vidéo prend une largeur minimale de 300px */
-    max-width: 400px; /* Largeur maximale pour chaque vidéo */
+    flex: 1 1 300px;  
+    max-width: 400px; 
     margin: 10px;
 }
 
@@ -122,7 +124,6 @@ body {
 }
 
 
-/* Footer */
 .footer {
     background-color: #2c3e50;
     color: white;
@@ -150,7 +151,6 @@ body {
     font-size: 0.9em;
 }
 
-/* Bouton dans la section hero */
 .hero-content {
     text-align: center;
     padding: 50px;
@@ -187,7 +187,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Menu icon - Animations */
 i.fas.fa-camera,
 i.fas.fa-file-alt,
 i.fas.fa-file-pdf,
@@ -208,6 +207,56 @@ i.fas.fa-file-pdf:hover,
 i.fas.fa-file-excel:hover,
 i.fas.fa-file-powerpoint:hover,
 i.fas.fa-file-word:hover {
-    background-color: #3498db; /* Changement de couleur au survol */
+    background-color: #e31010; 
+} 
+body.light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header.light-theme {
+    background-color: #276cac;
+    color: rgb(158, 43, 23);
+}
+
+.nav-bar.light-theme a {
+    color: #333;
+}
+
+.hero-section.light-theme {
+    background-color: lightblue;
+}
+
+.hero-content h1.light-theme {
+    color: #333;
+}
+/* Style pour l'affichage des données API */
+.api-display {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap; /* Permet d'afficher le texte avec des retours à la ligne */
+    word-wrap: break-word; /* Évite que le texte déborde */
+    font-size: 14px;
+}
+
+/* Ajoute des couleurs pour les clés et les valeurs */
+.api-display .key {
+    color: #276cac; /* Couleur pour les clés */
+    font-weight: bold;
+}
+
+.api-display .value {
+    color: #555; /* Couleur pour les valeurs */
+}
+
+/* Mettez en forme les sections imbriquées */
+.api-display .nested {
+    margin-left: 20px;
+    font-style: italic;
 }
 
