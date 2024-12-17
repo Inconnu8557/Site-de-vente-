@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page avec vidéo pleine page</title>
+    <title>Page avec vidéos et formulaire</title>
     <style>
+        /* Thème clair */
+        body.light-theme {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header.light-theme {
+            background-color: #276cac;
+            color: #fff;
+        }
+        .header.dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            width: 100%;
             font-family: 'Arial', sans-serif;
         }
-
         .header {
             display: flex;
             justify-content: space-between;
@@ -47,17 +58,13 @@
         }
 
         .hero-section {
-            height: 100vh;
-            background-color: lightblue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 60px 20px;
             text-align: center;
-            padding: 20px;
+            background-color: #f0f0f0;
         }
 
         .hero-content h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #333;
             margin-bottom: 20px;
         }
@@ -84,19 +91,99 @@
             transform: scale(1.05);
         }
 
-        .second-page {
-            height: 100vh;
+        .user-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .user-form h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .user-form p {
+            color: #777;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .user-form input {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: black;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .user-form input:focus {
+            border-color: #008CBA;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 140, 186, 0.6);
+        }
+
+        .user-form button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .user-form button:hover {
+            background-color: #005f75;
+            transform: scale(1.05);
+        }
+
+        .video-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .video-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .video-container {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: scale(1.05); 
         }
 
         iframe {
             width: 100%;
-            height: 100%;
+            height: 300px;
             border: none;
+            border-radius: 10px;
         }
 
         .footer {
@@ -133,34 +220,58 @@
             <img src="https://www.vivlio.com/wp-content/themes/vivlio/images/logo-vivlio.png" alt="Logo Vivlio">
         </div>
         <nav class="nav-bar">
+            <ul>
+                <li><a href="#Home">Accueil</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
-        <section class="hero-section">
+
+    <section class="hero-section">
         <div class="hero-content">
             <h1>Découvrez nos nouveaux modèles de liseuses</h1>
             <p>Relier l'informatique à la lecture.</p>
             <p>Partez en vacances sans avoir 17 livres dans votre valise.</p>
             <button onclick="window.location.href='#'">Acheter maintenant</button>
         </div>
-        <div class="video-section">
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/8_ZGBKZZg3k?si=33TLKB1xoolHcb_L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/fAHREjLVdm8?si=UH-Sd692ysUWfTgZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/SR3aVcCOp7E?si=ruU1IiG6gVDaa16l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/EM4TJvoNbPo?si=EraCmFPSCpGT_xMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
-            </div>
-        
     </section>
-    <section class="hero-content">
+
+    <section class="user-form">
         <h1>Bienvenue, <span id="username-display">!</span></h1>
-        <p>Entrez votre nom pour une expérience personnalisée.</p>
-        <input type="text" id="username-input" placeholder="Entrez votre nom complet">
+        <p>Entrez votre nom et email pour une expérience personnalisée.</p>
+        <input type="text" id="username-input" placeholder="Entrez votre nom">
+        <input type="email" id="email-input" placeholder="Entrez votre email">
         <button id="save-button">Sauvegarder</button>
         <button id="clear-button">Effacer</button>
     </section>
+
+    <section id="api-display-section">
+        <h2>Informations sur l'établissement</h2>
+        <div id="api-display">
+            <!-- Les données de l'API seront affichées ici -->
+        </div>
+    </section>
+
+    <section class="video-section">
+        <h2>Nos vidéos</h2>
+        <div class="video-grid">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8_ZGBKZZg3k?si=QnXAvQKIdllPgSkX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+            </div>      
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/d663nVbQHFs?si=oWqoCbPoIrp45UMb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ClyVQxh8U-Q?si=PgQMI-6Ob0PPHT3d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fAHREjLVdm8?si=d4UauKcKOXFwLDiL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>           </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0sOrQUg6zyk?si=hwkRKMtNneEVMedN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o39ZICOaJr8?si=s2vtRUjG-4P6ZPsM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="footer-links">
             <a href="#">Conditions d'utilisation</a>
@@ -169,7 +280,66 @@
         </div>
         <p>&copy; 2024 Vivilio. Tous droits réservés.</p>
     </footer>
- <script src="script.js" defer></script>
- <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const usernameInput = document.getElementById('username-input');
+            const emailInput = document.getElementById('email-input');
+            const saveButton = document.getElementById('save-button');
+            const clearButton = document.getElementById('clear-button');
+            const usernameDisplay = document.getElementById('username-display');
+
+            const loadUserInfo = () => {
+                const storedUsername = localStorage.getItem('username');
+                const storedEmail = localStorage.getItem('email');
+                if (storedUsername && storedEmail) {
+                    usernameInput.value = storedUsername;
+                    emailInput.value = storedEmail;
+                    usernameDisplay.textContent = storedUsername;
+                }
+            };
+
+            const saveUserInfo = () => {
+                const username = usernameInput.value;
+                const email = emailInput.value;
+                if (username && email) {
+                    localStorage.setItem('username', username);
+                    localStorage.setItem('email', email);
+                    usernameDisplay.textContent = username;
+                    alert("Informations enregistrées !");
+                } else {
+                    alert("Veuillez remplir tous les champs !");
+                }
+            };
+
+            const clearUserInfo = () => {
+                localStorage.removeItem('username');
+                localStorage.removeItem('email');
+                usernameInput.value = '';
+                emailInput.value = '';
+                usernameDisplay.textContent = '!';
+            };
+
+            saveButton.addEventListener('click', saveUserInfo);
+            clearButton.addEventListener('click', clearUserInfo);
+
+            loadUserInfo();
+
+            // API Display Section - Call example
+            const fetchApiData = async () => {
+    try {
+        const response = await fetch('https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/fr-en-annuaire-education/records?limit=1&where=identifiant_de_l_etablissement="0693890D"');
+        const data = await response.json(); // Extraction des données JSON
+        const displaySection = document.getElementById('api-display');
+        console.log(`<pre>${JSON.stringify(data, null, 2)}</pre>`); // Affiche les données dans la console pour vérifier
+        displaySection.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`; // Affiche les données dans la section
+    } catch (error) {
+        console.error('Erreur de récupération des données API:', error);
+    }
+};
+fetchApiData();
+
+        });
+    </script>
 </body>
 </html>
