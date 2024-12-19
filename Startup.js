@@ -7,19 +7,17 @@ xhr.responseType = "json";
 xhr.onload = () => {
   if (xhr.status === 200) {
     const data = xhr.response;
-    console.log(data); // Vérifiez la structure des données dans la console
+    console.log("data", data); 
+    const record = data.results[0];
 
-    // Vérifiez que les données existent et accédez au premier enregistrement
-    const record = data.records[0];
+    console.log(record)
 
-    // Trouvez l'élément HTML où vous voulez afficher l'API
     const apiDisplay = document.getElementById('api-display');
+
     
     if (record) {
-      // Formatez les données à afficher dans l'élément
       apiDisplay.textContent = `Nom de l'établissement : ${record.fields.nom_etablissement}, Adresse : ${record.fields.adresse_etablissement}`;
     } else {
-      // Si aucun enregistrement n'est trouvé
       apiDisplay.textContent = 'Aucun enregistrement trouvé.';
     }
   } else {
