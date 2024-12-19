@@ -130,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 const response = await fetch('https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/fr-en-annuaire-education/records?limit=1&where=identifiant_de_l_etablissement="0693890D"');
                 const data = await response.json(); 
+                console.log("iciic???")
                 const displaySection = document.getElementById('api-display');
     
                 const formatJson = (obj) => {
@@ -154,4 +155,5 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         fetchApiData();
     });
+    
     
