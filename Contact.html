@@ -13,33 +13,16 @@
             background-color: #f4f4f4;
             color: #333;
         }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-bar {
-            display: flex;
-            gap: 20px;
-        }
-        .nav-bar ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .nav-bar a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            padding: 10px 20px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-        .nav-bar a:hover {
+        .e-mail_button{
             background-color: #276cac;
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            text-align: center;
+            margin: 10px;
+            color: white;
+            text-decoration: none;
         }
         header {
             background-color: #333;
@@ -57,7 +40,7 @@
         }
         .form-container input, .form-container textarea {
             width: 100%;
-            padding: 5px;
+            padding: 10px;
             margin-bottom: 20px;
             border-radius: 4px;
             border: 1px solid #ccc;
@@ -83,17 +66,22 @@
             width: 100%;
             bottom: 0;
         }
+
+        img {
+            display: flex;
+            width: 150;
+        }
+        
+        a {
+            display: flex;
+            width: 150;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Page de Contact</h1>
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="Index.html">Accueil</a></li>
-            </ul>
-        </nav>
     </header>
 
     <div class="form-container">
@@ -111,10 +99,15 @@
             <button type="submit">Envoyer</button>
         </form>
     </div>
+    <h1>Nous écrire sur votre appli par défaut :</h1>
+    <a href="mailto:nowhere@email.org" class="e-mail_button">Send email to nowhere</a>
+    <img src="https://pmecdn.protonweb.com/image-transformation/?s=c&image=image%2Fupload%2Fv1703162849%2Fstatic%2Flogos%2Ficons%2Fmail_xxy4bg.svg">
+    <a title="Google, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Gmail_icon_(2020).svg" class="logo"><img width="150" alt="Gmail icon (2020)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/512px-Gmail_icon_%282020%29.svg.png?20221017173631"></a>
 
-    <footer>
+
+    <!--<footer>
         <p>&copy; 2024 Vivilio. Tous droits réservés.</p>
-    </footer>
+    </footer>-->
 
 </body>
 </html>
