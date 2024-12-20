@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page avec vidéos et formulaire</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header hidden">
         <div class="logo">
             <img src="https://www.vivlio.com/wp-content/themes/vivlio/images/logo-vivlio.png" alt="Logo Vivlio">
         </div>
@@ -20,8 +20,7 @@
             </ul>
         </nav>
     </header>
-
-    <section class="hero-section">
+    <section class="hero-section hidden">
         <div class="hero-content">
             <h1>Découvrez nos nouveaux modèles de liseuses</h1>
             <p>Relier l'informatique à la lecture.</p>
@@ -30,22 +29,30 @@
         </div>
     </section>
 
-    <section id="api-display-section">
+    <section id="api-display-section" class="hidden">
         <h2 class="special-heading">Ce site a été construit par un ado de 14 ans</h2>       <div id="api-display">
         </div>
-    </section>
-
-    <section class="user-form">
+    </section> 
+    <section class="user-form hidden">
         <h1>Bienvenue, <span id="username-display">!</span></h1>
         <p>Entrez votre nom et email pour une expérience personnalisée.</p>
         <input type="text" id="username-input" placeholder="Entrez votre nom">
         <input type="email" id="email-input" placeholder="Entrez votre email">
         <button id="save-button">Sauvegarder</button>
         <button id="clear-button">Effacer</button>
-
     </section>
-
-    <section class="video-section">
+    <div class="popup" id="newsletter-popup">
+        <div class="popup-content">
+            <span id="popupclose" class="close-popup">&times;</span>
+            <h2>Abonnez-vous à notre newsletter !</h2>
+            <p>Recevez nos dernières promotions et actualités directement dans votre boîte mail.</p>
+            <form>
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'abonner</button>
+            </form>
+        </div>
+    </div>
+    <section class="video-section hidden">
         <h2>Nos vidéos</h2>
         <div class="video-grid">
             <div class="video-container">
@@ -66,10 +73,11 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/mDqYy0iT1cM?si=LsUuiJf6fJBJRpWT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>          </div>   
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer hidden">
         <div class="footer-links">
             <a href="#">Conditions d'utilisation</a>
             <a href="#">Support Client</a>
+            
         </div>
         <p>&copy; 2024 Vivilio. Tous droits réservés.</p>
     </footer>
