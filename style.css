@@ -2,14 +2,18 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
+    background-color: #a69b9b; /* Couleur de fond douce */
+    line-height: 1.6;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #333, #555); 
     color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo img {
@@ -28,24 +32,30 @@ body, html {
     font-size: 16px;
     padding: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-bar a:hover {
-    background-color: #555;
-    transform: scale(1.1);
     border-radius: 5px;
 }
 
+.nav-bar a:hover {
+    background-color: #444;
+    transform: scale(1.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);  /* Ombre légère */
+}
+
 .hero-section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
     background-color: #f0f0f0;
+    background-image: url('hero-bg.jpg'); /* Image de fond légère */
+    background-size: cover;
+    background-position: center;
+    color: #333;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #333;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .hero-content p {
@@ -78,6 +88,7 @@ body, html {
     max-width: 600px;
     margin: 40px auto;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .user-form h1 {
@@ -155,7 +166,7 @@ body, html {
 }
 
 .video-container:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 iframe {
@@ -190,13 +201,14 @@ iframe {
     font-size: 14px;
     margin-top: 10px;
 }
+
 #api-display {
     max-width: 600px;
     margin: 20px auto;
     padding: 25px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #api-display h3 {
@@ -218,6 +230,7 @@ iframe {
 #api-display p:hover {
     background: #e9ecef;
 }
+
 .special-heading {
     text-align: center;
     color: #276cac;
@@ -230,6 +243,7 @@ iframe {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     animation: slideIn 0.5s ease-out;
 }
+
 /* Animation fade-in */
 @keyframes fadeIn {
     0% {
@@ -250,6 +264,7 @@ iframe {
 .hidden {
     opacity: 0;
 }
+
 /* Conteneur principal de la pop-up */
 .popup {
     position: fixed;
@@ -313,14 +328,72 @@ iframe {
     background-color: #005f75;
 }
 
-/* Animation pour la pop-up */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+#quote-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+#quote-text {
+    font-size: 18px;
+    color: #555;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+#quote-section button {
+    padding: 8px 18px;
+    font-size: 14px;
+    background-color: #f2f2f2;  /* Couleur douce et discrète */
+    color: #333;
+    border: 1px solid #ddd;  /* Bordure légère et subtile */
+    border-radius: 25px;  /* Bordures arrondies pour un look moderne */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Légère ombre pour un effet 3D */
+}
+
+#quote-section button:hover {
+    background-color: #e0e0e0;  
+    border-color: #bbb;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+    transform: scale(1.05);  
+}
+.floating-btn {
+    position: fixed; /* Fixe le bouton à une position */
+    top: 20px; /* En haut à 20px */
+    right: 20px; /* 20px de la droite */
+    background-color: #008CBA; /* Couleur du bouton */
+    color: white; /* Couleur du texte */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50%;  /* Bouton circulaire */
+    font-size: 24px;     /* Taille du texte */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Ombre */
+    z-index: 1000; /* Assure qu'il est au-dessus des autres éléments */
+    display: none; /* Caché par défaut */
+}
+
+/* Quand on fait défiler la page */
+.floating-btn.visible {
+    display: block; /* Affiche le bouton quand la classe 'visible' est ajoutée */
+}
+
+
+/* Optionnel : retirer la bordure de focus */
+.floating-btn:focus {
+    outline: none;
+}
+
+
+
