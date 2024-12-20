@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const display = document.getElementById('username-display');
     
     const handleButtonHover = (event) => {
-        const transformValue = event.type === 'mouseover' ? 'scale(1.1)' : 'scale(1)';
+        const transformValue = event.type === 'mouseover' ? 'scale(2)' : 'scale(2)';
         button.style.transform = transformValue;
     };
 
@@ -46,21 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     handleInputChange();
 });
 document.addEventListener('DOMContentLoaded', () => {
-    // Fonction pour appliquer le thème
-    function applyTheme(theme) {
-        document.body.classList.remove('light-theme', 'dark-theme');
-        document.body.classList.add(`${theme}-theme`);
-
-        // Appliquer le thème aux éléments spécifiques
-        document.querySelector('.header').classList.remove('light-theme', 'dark-theme');
-        document.querySelector('.header').classList.add(`${theme}-theme`);
-
-        document.querySelector('.nav-bar').classList.remove('light-theme', 'dark-theme');
-        document.querySelector('.nav-bar').classList.add(`${theme}-theme`);
-
-        document.querySelector('.hero-section').classList.remove('light-theme', 'dark-theme');
-        document.querySelector('.hero-section').classList.add(`${theme}-theme`);
-    }
     const usernameInput = document.getElementById('username-input');
     const emailInput = document.getElementById('email-input');
     const saveButton = document.getElementById('save-button');
@@ -155,5 +140,4 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         fetchApiData();
     });
-    
     
