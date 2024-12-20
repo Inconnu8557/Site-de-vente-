@@ -240,6 +240,31 @@
             background: #e9ecef;
         }
     </style>
+    <style>
+        .special-heading {
+            text-align: center;
+            color: #276cac;
+            font-size: 24px;
+            margin: 40px auto;
+            padding: 15px;
+            max-width: 600px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            animation: slideIn 0.5s ease-out;
+        }
+    
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -250,6 +275,7 @@
             <ul>
                 <li><a href="Index.html">Accueil</a></li>
                 <li><a href="Contact.html">Contact</a></li>
+                <li><a href="apropos.html">A propos de nous </a></li>
             </ul>
         </nav>
     </header>
@@ -264,9 +290,7 @@
     </section>
 
     <section id="api-display-section">
-        <h2>Ce site a été construit par un ado de 14 ans</h2>
-        <div id="api-display">
-         <!-- Les données de l'API -->
+        <h2 class="special-heading">Ce site a été construit par un ado de 14 ans</h2>        <div id="api-display">
         </div>
     </section>
 
@@ -305,11 +329,9 @@
         <div class="footer-links">
             <a href="#">Conditions d'utilisation</a>
             <a href="#">Support Client</a>
-            <a href="#">A propos de nous</a>
         </div>
         <p>&copy; 2024 Vivilio. Tous droits réservés.</p>
     </footer>
-
    <script>
     document.addEventListener('DOMContentLoaded', () => {
         const usernameInput = document.getElementById('username-input');
@@ -392,7 +414,7 @@
         } catch (error) {
             console.error('Erreur de récupération des données API:', error);
             const displaySection = document.getElementById('api-display');
-            if (displaySection) {
+            if (displaySection) e 
                 displaySection.innerHTML = `<p>Erreur lors du chargement des données : ${error.message}</p>`;
             }
         }
