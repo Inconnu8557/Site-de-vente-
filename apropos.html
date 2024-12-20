@@ -94,7 +94,10 @@
             padding: 20px 0;
             width: 100%;
             position: relative; 
-            bottom: -800px;
+        }
+        .logo img {
+            width: 150px;
+            height: auto;
         }
         #api-display {
             flex: 1;
@@ -104,6 +107,7 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 200px;
         }
         #api-display h3 {
             color: #276cac;
@@ -142,13 +146,6 @@
     <section id="api-display-section">
     </section>
 </head>
-<footer class="footer">
-    <div class="footer-links">
-        <a href="#">Conditions d'utilisation</a>
-        <a href="#">Support Client</a>
-    </div>
-    <p>&copy; 2024 Vivilio. Tous droits réservés.</p>
-</footer>
     <div id="api-display"></div>
     <script>
         const fetchApiData = async () => {
@@ -178,7 +175,8 @@
                         <h2>Dirigeant : ${company.dirigeants[0].prenoms || 'Non spécifié'} ${company.dirigeants[0].nom || 'Non spécifié'}</h2>       
                         <p>Date de naissance: ${company.dirigeants[0].date_de_naissance || 'Non spécifiée'}</p>  
                         <p>Nationalité: ${company.dirigeants[0].nationalite || 'Non spécifiée'}</p>
-                        <p>Qualite: ${company.dirigeants[0].qualite || 'Non spécifiée'}</p>`;
+                        <p>Qualite: ${company.dirigeants[0].qualite || 'Non spécifiée'}</p>
+                        <p>Type de personne: ${company.dirigeants[0].type_dirigeant || 'Non spécifié'}</p>`;
                         
                 } else {
                     displaySection.innerHTML = '<p>Aucune donnée trouvée</p>';
@@ -191,8 +189,14 @@
                 }
             }
         };
-
         fetchApiData();
     </script>
+<footer class="footer">
+    <div class="footer-links">
+        <a href="#">Conditions d'utilisation</a>
+        <a href="#">Support Client</a>
+    </div>
+    <p>&copy; 2024 Vivilio. Tous droits réservés.</p>
+</footer>
 </body>
 </html>
