@@ -141,3 +141,53 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const quoteText = document.getElementById('quote-text');
+    const newQuoteBtn = document.getElementById('new-quote-btn');
+
+    const quotes = [
+        "L'avenir appartient à ceux qui croient à la beauté de leurs rêves. - Eleanor Roosevelt",
+        "La vie est ce qui se passe quand vous êtes occupé à faire d'autres projets. - John Lennon",
+        "L'échec n'est pas l'opposé du succès, c'est une partie du succès. - Arianna Huffington",
+        "Ne regarde pas l'horloge ; fais ce qu'elle fait, continue d'avancer. - Sam Levenson",
+        "L'inspiration existe, mais elle doit vous trouver en train de travailler. - Pablo Picasso",
+        "Le travail éloigne de nous trois grands maux : l'ennui, le vice et le besoin. - Voltaire",
+        "La vie est un mystère qu'il faut vivre, et non un problème à résoudre. - Gandhi",
+        "Le bonheur est la seule chose qui se double si on le partage. - Albert Schweitzer",
+        "Le succès c'est d'aller d'échec en échec sans perdre son enthousiasme. - Winston Churchill",
+        "Exige beaucoup de toi-même et attends peu des autres. Ainsi beaucoup d'ennuis te seront épargnés - Confucius",
+        "Vis comme si tu devais mourir demain. Apprends comme si tu devais vivre toujours. - Gandhi",
+
+    ];
+
+    function getRandomQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        return quotes[randomIndex];
+    }
+
+    newQuoteBtn.addEventListener('click', () => {
+        const randomQuote = getRandomQuote();
+        quoteText.textContent = randomQuote;
+    });
+});
+// Cibler le bouton flottant
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    if (scrollToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                scrollToTopBtn.classList.add('visible'); // Ajouter la classe visible
+            } else {
+                scrollToTopBtn.classList.remove('visible'); // Retirer la classe visible
+            }
+        });
+
+        scrollToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+});
