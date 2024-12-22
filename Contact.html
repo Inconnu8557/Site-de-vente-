@@ -6,6 +6,32 @@
     <title>Contact</title>
     <link rel="stylesheet" href="style.css"> 
     <style>
+
+        .logo {
+            display: flex;
+        }
+
+        .default_app {
+            margin-left: 10px;
+            margin-top: 28px;
+        }
+
+        .gmail {
+            margin: 20px 10px 10px 10px;
+        }
+
+        .proton {
+            margin: 10px 10px 10px 10px;
+        }
+
+        .outlook {
+            margin: 10px;
+        }
+
+        .sign_in_up {
+            margin: 10px;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -30,17 +56,21 @@
             padding: 20px;
             text-align: center;
         }
+
+        img {
+            display: flex;
+            width: 150;
+        }
+
         .form-container {
             max-width: 600px;
-            margin: 50px auto;
             background-color: white;
             padding: 20px;
-            border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         .form-container input, .form-container textarea {
             width: 100%;
-            padding: 10px;
+            padding: 10px 0 10px 10px;
             margin-bottom: 20px;
             border-radius: 4px;
             border: 1px solid #ccc;
@@ -62,30 +92,31 @@
             color: white;
             text-align: center;
             padding: 10px;
-            position: fixed;
             width: 100%;
             bottom: 0;
         }
 
-        img {
+        .main {
             display: flex;
-            width: 150;
         }
-        
-        a {
+
+        .write_a_mail{
             display: flex;
-            width: 150;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Page de Contact</h1>
-    </header>
+    <!--<header>
+        <h1>Contact</h1>
+    </header>-->
+
+    <main class="main">
 
     <div class="form-container">
-        <h2>Nous contacter</h2>
+        <h2>Nous contacter via notre messagerie</h2>
         <form action="submit_form.php" method="POST">
             <label for="name">Nom :</label>
             <input type="text" id="name" name="name" required placeholder="Entrez votre nom">
@@ -99,11 +130,22 @@
             <button type="submit">Envoyer</button>
         </form>
     </div>
-    <h1>Nous écrire sur votre appli par défaut :</h1>
-    <a href="mailto:nowhere@email.org" class="e-mail_button">Send email to nowhere</a>
-    <img src="https://pmecdn.protonweb.com/image-transformation/?s=c&image=image%2Fupload%2Fv1703162849%2Fstatic%2Flogos%2Ficons%2Fmail_xxy4bg.svg">
-    <a title="Google, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Gmail_icon_(2020).svg" class="logo"><img width="150" alt="Gmail icon (2020)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/512px-Gmail_icon_%282020%29.svg.png?20221017173631"></a>
 
+    <div class="write_a_mail">
+        <h2 class="default_app">Ou nous écrire sur :</h2>
+        <a href="mailto:nowhere@email.org" class="e-mail_button">Votre app<br> par défaut</a>
+        <a title="Google, Public domain, via Wikimedia Commons" href="https://mail.google.com/" class="logo gmail"><img width="64" height="48" alt="Gmail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/512px-Gmail_icon_%282020%29.svg.png?20221017173631"></a>
+        <a title="Protonmail logo, via https://proton.me/fr" href="https://mail.proton.me/" class="logo proton"><img width="58" alt="Protonmail" src="https://pmecdn.protonweb.com/image-transformation/?s=c&image=image%2Fupload%2Fv1703162849%2Fstatic%2Flogos%2Ficons%2Fmail_xxy4bg.svg"></a>
+        <a title="Microsoft Corporation, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Microsoft_Office_Outlook_(2018%E2%80%93present).svg" class="logo outlook"><img width="64" height="59,9" alt="Microsoft Office Outlook" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/512px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png?20230309112740"></a>
+    </div>
+
+    <br>
+
+    <div>
+        <h2 class="sign_in_up">Déconnécté(e) ? Ou nouveau/nouvelle ?</h2>
+    </div>
+
+</main>
 
     <!--<footer>
         <p>&copy; 2024 Vivilio. Tous droits réservés.</p>
