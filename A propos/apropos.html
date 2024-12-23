@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos de nous</title>
+    <link rel="stylesheet" href="style.css"> 
+    <body>
+        <header>
+            <h1>A propos de Vivlio</h1>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="/Index.html">Accueil</a></li>
+                </ul>
+            </nav>
+        </header>
+    <section id="api-display-section">
+    </section>
+</head>
+    <div id="api-display"></div>
+    <script>
+        const fetchApiData = async () => {
+            try {
+                const response = await fetch('https://recherche-entreprises.api.gouv.fr/search?code_postal=69009&nom_personne=%22Dupr%C3%A9%22&q=%22Vivlio%22"');
+                if (!response.ok) {
+                    throw new Error(`Erreur HTTP ! Statut : ${response.status}`);
+                }
+                const data = await response.json();
+                console.log('API Response:', data);
+
+                const displaySection = document.getElementById('api-display');
+                if (!displaySection) {
+                    console.error('Element with ID "api-display" not found.');
+                    return;
+                }
+
+                if (data && data.results && data.results.length > 0) {
+                    const company = data.results[0];
+                    displaySection.innerHTML = `
+                        <h2>${company.nom_complet || 'Nom non disponible'}</h2>
+                        <p>Adresse: ${company.siege.adresse || 'Non spécifiée'}</p>
+                        <p>Code postal: ${company.siege.code_postal || 'Non spécifié'}</p>
+                        <p>Ville: ${company.siege.libelle_commune || 'Non spécifiée'}</p>
+                        <p>Date de création: ${company.date_creation || 'Non spécifié'}</p>
+                        <p>Département: ${company.siege.departement || 'Non spécifié'}</p>
+                        <h2>Dirigeant : ${company.dirigeants[0].prenoms || 'Non spécifié'} ${company.dirigeants[0].nom || 'Non spécifié'}</h2>       
+                        <p>Date de naissance: ${company.dirigeants[0].date_de_naissance || 'Non spécifiée'}</p>  
+                        <p>Nationalité: ${company.dirigeants[0].nationalite || 'Non spécifiée'}</p>
+                        <p>Qualite: ${company.dirigeants[0].qualite || 'Non spécifiée'}</p>
+                        <p>Type de personne: ${company.dirigeants[0].type_dirigeant || 'Non spécifié'}</p>`;
+                        
+                } else {
+                    displaySection.innerHTML = '<p>Aucune donnée trouvée</p>';
+                }
+            } catch (error) {
+                console.error('Erreur:', error);
+                const displaySection = document.getElementById('api-display');
+                if (displaySection) {
+                    displaySection.innerHTML = `<p>Erreur lors du chargement des données: ${error.message}</p>`;
+                }
+            }
+        };
+        fetchApiData();
+    </script>
+<footer class="footer">
+    <div class="footer-links">
+        <a href="#">Conditions d'utilisation</a>
+        <a href="#">Support Client</a>
+    </div>
+    <p>&copy; 2024 Vivilio. Tous droits réservés.</p>
+</footer>
+</body>
+</html>
