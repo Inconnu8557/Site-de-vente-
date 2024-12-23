@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at 50%, #00e1ff 10%, #8000ff 59%, #ff0019 100%);
+    color: #333;
+}
+.copyright {
+    vertical-align: bottom;
+    color: black;
+    margin-top: 285px;
+    margin-left: 245px;
+    font-size: 25px;
+}
+.default_app {
+    margin-left: 10px;
+    margin-top: 28px;
+    color: black;
+}
+.e-mail_button{
+    background-color: #00b7ff;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 22.5px 20px 0 20px;
+    display: flex;
+    text-align: center;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    border: solid 5px black;
+    border-radius: 50px
+}
+.form-container {
+    max-width: 600px;
+    background-color: white;
+    padding: 109px 20px 149px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.form-container button {
+    background-color: #00b7ff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 22px;
+}
+.form-container button:hover {
+    background-color: #13139d;
+}
+.gmail {
+    margin: 20px 10px 10px 10px;
+    padding: 20px 15px 20px 15px;
+}
+img {
+    display: flex;
+    width: 150;
+}
+.login_link {
+    background-color: #8800ff;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+.login_link:hover {
+    background-color: #1500ff;
+}
+.logo {
+    display: flex;
+    background-color: white;
+    padding: 15px;
+    border: solid 5px black;
+    border-radius: 50px;
+}
+.sign_in_up {
+    margin-left: 10px;
+    margin-top: 28px;
+    color: black;
+    
+}
+.main {
+    display: flex;
+}
+.outlook {
+    margin: 10px;
+}
+
+.proton {
+    margin: 10px 10px 10px 10px;
+}
+.write_a_mail{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
