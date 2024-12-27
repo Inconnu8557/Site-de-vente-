@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style-contact.css"> 
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header hidden">
+        <div class="logo">
+            <img src="https://www.vivlio.com/wp-content/themes/vivlio/images/logo-vivlio.png" alt="Logo Vivlio">
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="/Index.html">Accueil</a></li>
+                </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="form-container">
+            <h2>Nous contacter via notre messagerie</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required placeholder="Entrez votre nom">
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required placeholder="Entrez votre email">
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Entrez votre message"></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+
+        <div class="contact-options">
+            <h2 class="default_app">Ou nous écrire sur :</h2>
+            <div class="write_a_mail">
+                <a href="mailto:nowhere@email.org" class="e-mail_button">Votre app<br> par défaut</a>
+                <a title="Gmail" href="https://mail.google.com/" class="e-mail_button"><img width="64" height="48" alt="Gmail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/512px-Gmail_icon_%282020%29.svg.png?20221017173631"></a>
+                <a title="Protonmail" href="https://mail.proton.me/" class="e-mail_button"><img width="58" alt="Protonmail" src="https://pmecdn.protonweb.com/image-transformation/?s=c&image=image%2Fupload%2Fv1703162849%2Fstatic%2Flogos%2Ficons%2Fmail_xxy4bg.svg"></a>
+                <a title="Microsoft Corporation, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Microsoft_Office_Outlook_(2018%E2%80%93present).svg" class="e-mail_button"><img width="64" height="59,9" alt="Microsoft Office Outlook" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/512px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png?20230309112740"></a>
+            </div>
+        </div>
+    </main>
+    <div class="map-container">
+        <h2>Notre localisation</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5565.397494516539!2d4.7959245119256915!3d45.77722731237785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb65752b7279%3A0x1006d3ea9f68c746!2s26%20Rue%20Berjon%2C%2069009%20Lyon!5e0!3m2!1sfr!2sfr!4v1735319755618!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2023 Vivlio. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+
+

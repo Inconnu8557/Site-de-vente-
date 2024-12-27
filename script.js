@@ -85,36 +85,29 @@ document.addEventListener('DOMContentLoaded', () => {
 };
 fetchApiData();
 });
-// script.js
-
-// Fonction qui détecte la position de l'élément par rapport à la fenêtre
 function checkScroll() {
-    const elements = document.querySelectorAll('.hidden'); // Sélectionne tous les éléments avec la classe 'hidden'
+    const elements = document.querySelectorAll('.hidden'); 
     
     elements.forEach((element) => {
-        const rect = element.getBoundingClientRect(); // Obtient la position de l'élément
+        const rect = element.getBoundingClientRect(); 
         const windowHeight = window.innerHeight;
 
-        // Vérifie si l'élément est visible dans la fenêtre de visualisation
         if (rect.top <= windowHeight && rect.bottom >= 0) {
-            element.classList.add('fade-in'); // Ajoute la classe d'animation
-            element.classList.remove('hidden'); // Enlève la classe 'hidden'
+            element.classList.add('fade-in');
+            element.classList.remove('hidden'); 
         }
     });
 }
 
-// Écoute l'événement de défilement
 window.addEventListener('scroll', checkScroll);
 
-// Appel initial pour vérifier l'état au cas où l'élément serait déjà visible
 checkScroll();
 document.addEventListener('DOMContentLoaded', () => {
     const popup = document.getElementById('newsletter-popup');
     const popupclose = document.getElementById('popupclose');
 
-    // Vérifie si la pop-up a déjà été vue
     const popupShown = localStorage.getItem('popupShown');
-    console.log('popupShown:', popupShown); // Vérifie la valeur
+    console.log('popupShown:', popupShown);
 
     if (!popupShown) {
         console.log('Affichage de la pop-up');
@@ -123,20 +116,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    // Ferme la pop-up et enregistre l'état
     popupclose.addEventListener('click', () => {
         console.log('Pop-up fermée');
         popup.style.display = 'none';
-        localStorage.setItem('popupShown', 'true'); // Enregistre dans localStorage
+        localStorage.setItem('popupShown', 'true');
         console.log('popupShown enregistré dans localStorage');
     });
 
-    // Ferme la pop-up en cliquant à l'extérieur
     popup.addEventListener('click', (event) => {
         if (event.target === popup) {
             console.log('Pop-up fermée en cliquant à l’extérieur');
             popup.style.display = 'none';
-            localStorage.setItem('popupShown', 'true'); // Enregistre dans localStorage
+            localStorage.setItem('popupShown', 'true'); 
             console.log('popupShown enregistré dans localStorage');
         }
     });
@@ -170,16 +161,15 @@ document.addEventListener('DOMContentLoaded', () => {
         quoteText.textContent = randomQuote;
     });
 });
-// Cibler le bouton flottant
 document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
     if (scrollToTopBtn) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
-                scrollToTopBtn.classList.add('visible'); // Ajouter la classe visible
+                scrollToTopBtn.classList.add('visible'); 
             } else {
-                scrollToTopBtn.classList.remove('visible'); // Retirer la classe visible
+                scrollToTopBtn.classList.remove('visible');
             }
         });
 
